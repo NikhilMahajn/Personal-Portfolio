@@ -2,7 +2,7 @@ from datetime import datetime
 from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate, migrate
-
+import os
 
 import requests
 import re
@@ -40,8 +40,11 @@ class Contact(db.Model):
 def get_projects():
     # api_url = f'https://api.github.com/users/coderNiKhIlbro/repos'
     # cards_list = requests.get(api_url).json()
-    cards_list = [{'title':'Face-Mask-Detector','language':'Python, Flask, Deeplearning','description':'disc','url':'https://github.com/coderNiKhIlbro/Face-Mask-App'},
-                  {'title':'Car Price Predictor','language':'Machine Learning, Flask, ','description':'disc','url':'https://github.com/coderNiKhIlbro/Face-Mask-App'},
+    cards_list = [{'title':'Face-Mask-Detector','language':'Python, Flask, Deeplearning','url':'https://github.com/coderNiKhIlbro/Face-Mask-App'},
+                  {'title':'Stock Price Perdiction Webapp','language':'Machine Learning, Django,yfinance API ','url':'https://github.com/NikhilMahajn/Stock-Price-Forcasting'},
+                  {'title':'Car Price Predictor','language':'Machine Learning, Flask, ','url':'https://github.com/coderNiKhIlbro/Face-Mask-App'},
+                  {'title':'Personal Consultant','language':'GIMINI2.0 API Integration, Django, ','url':'https://github.com/NikhilMahajn/Personal-cunsultant'},
+                  {'title':'Kaggle Competitions','language':'','url':'https://github.com/NikhilMahajn/Machine-learning-Project'},
                   ]
     return cards_list
 
